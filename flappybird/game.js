@@ -51,6 +51,7 @@ canvas.addEventListener('click',function(event){
             swoosh.play();
             break;
         case state.game:
+            if(bird.y - bird.radius <= 0) return; //stop bird from going above canvas
             bird.flap();
             flap.play()
             break;
